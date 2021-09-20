@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head.ejs") %>
+
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav_link">
+          <a href="/">Home</a>
+        </div>
+        <div class="nav_link">
+          <a href="/posts">Content</a>
+        </div>
+        <div class="nav_link">
+          <a href="/create-post">Post it</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+
+
+      <div class="content">
+        
+        <div class="form_wrapper">
+          <form id="newpost" method="post" action="/create-post" class="post_form">
+            <h1>Create post</h1>
+            <div class="form_item">
+              <label>Author</label>
+              <input form="newpost" name="author" minlength="3" maxlength="25" required type="text">
+            </div>
+            <div class="form_item">
+              <label>Title</label>
+              <input minlength="3" name="title" maxlength="50" required type="text">
+            </div>
+            <div class="form_item">
+              <label>Text</label>
+              <textarea minlength="20" name="text" required ></textarea>
+            </div>
+            <button form="newpost" type="submit" class="publish">Publish</button>
+          </form>
+        </div>
+          
+      </div>
+
+    </main>
+
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+  </body>
+
+</html>

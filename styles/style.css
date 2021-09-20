@@ -1,0 +1,174 @@
+body {
+  background: linear-gradient(to top left, #14e1f0, #4e338d);
+}
+
+/* HEADER */
+.header {
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 2px solid #fff;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 5vh;
+  font-size: 24px;
+  font-family: sans-serif;
+}
+
+.nav_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5vw;
+}
+
+.nav_link a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.nav_link a:hover {
+  color: #033b7a;
+  text-decoration: underline;
+}
+
+/* CONTENT */
+.container {
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: 6vh auto;
+  overflow-x: hidden;
+}
+
+.home_text {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  font-family: cursive;
+  color: aliceblue;
+  font-size: 50px;
+}
+
+.home_text h2,h1 {
+  font-family: monospace;
+  font-size: 40px;
+  color: aliceblue;
+}
+
+.home_text a {
+  color: #033b7a;
+}
+
+.post_wrapper {
+  background: #fff;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+.post_info{
+  padding-top: 10px;
+}
+
+.author {
+  color: #777;
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.date {
+  color: #999;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: rgba(0, 116, 248, 0.74);
+  padding: 10px;
+  display: block;
+}
+
+.text {
+  color: #777;
+  max-height: 100px;
+  margin: 0 10px;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.form_wrapper {
+  background: #fff;
+  width: 90%;
+  height: 70vh;
+  border-radius: 10px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post_form {
+  font-family: sans-serif;
+  width: 80%;
+}
+
+.post_form h1 {
+  color: #3482f7;
+}
+
+.post_form input,
+textarea {
+  width: 100%;
+  height: 5vh;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #146cf0;
+  font-size: 24px;
+}
+
+.post_form textarea {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  font-size: 20px;
+}
+
+.form_item {
+  margin: 20px 0;
+}
+
+.publish {
+  outline: none;
+  border: none;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  background: #146cf0;
+  color: #fff;
+}
+
+.publish:active {
+  border: 5px solid #3482f7;
+}
+
+/* FOOTER */

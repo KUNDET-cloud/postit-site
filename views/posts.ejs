@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head.ejs") %>
+
+  <body>
+    <%- include("partials/header.ejs") %>
+
+    <main class="container">
+
+
+      <div class="content">
+        <% if(posts.length) {%>
+        <%posts.forEach((i) => { %>
+          <div class="post_wrapper">
+            <div class="post_info">
+              <span class="author" ><%= i.author %></span>
+              <span class="date" ><%= i.date %></span>
+            </div>
+            <a href="/posts/<%= i.id %>" class="title"><%= i.title %></a>
+            <div class="text">
+              <%= i.text %>
+            </div>
+          </div>
+        <% })} else {%>
+        <h1 class="home_text">No posts</h1>
+        <% } %>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="footer"></footer>
+
+  </body>
+
+</html>
