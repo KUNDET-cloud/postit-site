@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head.ejs") %>
+  <head>
+    <%- include("partials/head.ejs") %>
+      <title>
+        <%= title %>
+      </title>
+  </head>
 
   <body>
     <header class="header">
@@ -35,7 +40,7 @@
             </div>
             <div class="form_item">
               <label>Text</label>
-              <textarea minlength="20" name="text" required ></textarea>
+              <textarea wrap="physical" minlength="20" name="text" required ></textarea>
             </div>
             <button form="newpost" type="submit" class="publish">Publish</button>
           </form>
@@ -46,7 +51,6 @@
     </main>
 
     <footer class="footer"></footer>
-    <script src="script.js"></script>
   </body>
 
 </html>

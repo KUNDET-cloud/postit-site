@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head.ejs") %>
-
+  <head>
+    <%- include("partials/head.ejs") %>
+      <title>
+        <%= title %>
+      </title>
+  </head>
   <body>
     <%- include("partials/header.ejs") %>
 
@@ -9,20 +13,39 @@
 
 
       <div class="content">
-        <div class="home_text">
 
-          <h2>
-            View post
-          </h2>
-
-        </div>
+          <div class="post_view">
+            <div class="post_view_info">
+              <div class="post_view_author"><%= post.author %></div>
+              <div class="post_view_date"><%= post.createdAt.toLocaleDateString() %></div>
+            </div>
+            <div class="post_view_title"><%= post.title %></div>
+            <div class="post_view_text"><%= post.text %></div>
+            <div class="buttons">
+              <button data-id='<%= post.id %>' class="delete">Delete</button>
+            </div>
+          </div>
 
       </div>
 
     </main>
 
     <footer class="footer"></footer>
+    <script>
+      const deleteBtn = document.querySelector(".delete");
 
+      deleteBtn.addEventListener("click", (e) => {
+        const id = e.target?.dataset?.id
+        if (id) {
+          fetch(`/posts/${id}`, {
+            method: 'DELETE'
+          }).then(() => {
+            window.location.href = '/posts'
+          })
+        }
+      });
+
+    </script>
   </body>
 
 </html>

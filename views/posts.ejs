@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include("partials/head.ejs") %>
-
+  <head>
+    <%- include("partials/head.ejs") %>
+      <title>
+        <%= title %>
+      </title>
+  </head>
   <body>
     <%- include("partials/header.ejs") %>
 
@@ -9,12 +13,13 @@
 
 
       <div class="content">
-        <% if(posts.length) {%>
+        <% posts.reverse() %>
+        <% if(posts.length) { %>
         <%posts.forEach((i) => { %>
           <div class="post_wrapper">
             <div class="post_info">
               <span class="author" ><%= i.author %></span>
-              <span class="date" ><%= i.date %></span>
+              <span class="date" ><%= i.createdAt.toLocaleDateString() %></span>
             </div>
             <a href="/posts/<%= i.id %>" class="title"><%= i.title %></a>
             <div class="text">

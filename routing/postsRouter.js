@@ -1,13 +1,21 @@
 import Router from "express";
 
-const postsRouter = new Router()
+import {
+  getHome,
+  getPosts,
+  getPost,
+  deletePost,
+  getCreatePost,
+  createPost,
+} from "../cotrollers/postsController.js";
 
-postsRouter.get('/')
-postsRouter.get('/posts')
-postsRouter.get('/posts/:id')
-postsRouter.get('/create-post')
-postsRouter.post('/create-post')
-postsRouter.put('/posts/:id')
-postsRouter.delete('/posts/:id')
+const postsRouter = new Router();
 
-export default postsRouter
+postsRouter.get("/", getHome);
+postsRouter.get("/posts", getPosts);
+postsRouter.get("/posts/:id", getPost);
+postsRouter.delete("/posts/:id", deletePost);
+postsRouter.get("/create-post", getCreatePost);
+postsRouter.post("/create-post", createPost);
+
+export default postsRouter;

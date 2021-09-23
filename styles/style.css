@@ -12,6 +12,7 @@ body {
   top: 0;
   width: 100%;
   border-bottom: 2px solid #fff;
+  background: #454C9B;
 }
 
 /* NAV */
@@ -43,7 +44,7 @@ body {
 
 /* CONTENT */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   min-height: 90vh;
   margin: 6vh auto;
   overflow-x: hidden;
@@ -64,7 +65,8 @@ body {
   font-size: 50px;
 }
 
-.home_text h2,h1 {
+.home_text h2,
+h1 {
   font-family: monospace;
   font-size: 40px;
   color: aliceblue;
@@ -75,25 +77,25 @@ body {
 }
 
 .post_wrapper {
-  background: #fff;
+  background: #1e3263b2;
   width: 90%;
   margin: 20px auto;
   border-radius: 10px;
   font-family: sans-serif;
 }
 
-.post_info{
+.post_info {
   padding-top: 10px;
 }
 
 .author {
-  color: #777;
+  color: #ddd;
   font-size: 18px;
   padding: 0 10px;
 }
 
 .date {
-  color: #999;
+  color: #ddd;
   font-size: 16px;
   padding: 0 10px;
 }
@@ -101,18 +103,20 @@ body {
 .title {
   font-size: 30px;
   font-weight: 600;
-  color: rgba(0, 116, 248, 0.74);
+  color: #0088f8;
   padding: 10px;
   display: block;
 }
 
 .text {
-  color: #777;
+  color: #bbb;
   max-height: 100px;
   margin: 0 10px;
   padding: 10px 0;
   overflow: hidden;
 }
+
+/* CREATE POST */
 
 .form_wrapper {
   background: #fff;
@@ -169,6 +173,70 @@ textarea {
 
 .publish:active {
   border: 5px solid #3482f7;
+}
+
+/* POST VIEW */
+
+.post_view {
+  width: 90%;
+  min-height: 50vh;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.post_view_info {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.post_view_author {
+  font-size: 20px;
+}
+
+.post_view_date,
+.post_view_time {
+  color: #777;
+  font-size: 16px;
+  margin: 0 10px;
+}
+
+.post_view_title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.post_view_text {
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete {
+  outline: none;
+  border: none;
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  display: block;
+  cursor: pointer;
+  background: #d40000;
+  color: #fff;
+  margin: 20px 0;
+}
+
+.delete:active {
+  border: 5px solid #fc4949;
 }
 
 /* FOOTER */
