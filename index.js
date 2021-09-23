@@ -1,6 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import postsRouter from "./routing/postsRouter.js";
+import { config } from "dotenv";
+
+config();
 
 const app = express();
 
@@ -11,11 +14,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(postsRouter);
 
 const PORT = process.env.PORT || 3000;
-const DB_URL =
-  "mongodb+srv://kundet:tednuk@cluster0.pbpma.mongodb.net/poster-app?retryWrites=true&w=majority";
 
 mongoose
-  .connect(DB_URL)
+  .connect(process.env.DB_URL)
   .then(() => console.log("Connected to DB"))
   .catch((e) => console.log(e));
 
