@@ -4,7 +4,7 @@ body {
 
 /* HEADER */
 .header {
-  height: 6vh;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,12 +121,12 @@ h1 {
 .form_wrapper {
   background: #fff;
   width: 90%;
-  height: 70vh;
   border-radius: 10px;
   margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 70vh;
 }
 
 .post_form {
