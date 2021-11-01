@@ -1,9 +1,10 @@
 body {
-  background: linear-gradient(to top left, #14e1f0, #4e338d);
+  /*background: linear-gradient(to top left, #14e1f0, #4e338d);*/
 }
 
 /* HEADER */
 .header {
+  background: linear-gradient(to top left, #14e1f0, #4e338d);
   height: 50px;
   display: flex;
   align-items: center;
@@ -12,7 +13,7 @@ body {
   top: 0;
   width: 100%;
   border-bottom: 2px solid #fff;
-  background: #454C9B;
+  /*background: #454C9B;*/
 }
 
 /* NAV */

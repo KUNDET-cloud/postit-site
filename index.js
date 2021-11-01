@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import postsRouter from "./routing/postsRouter.js";
+import authRouter from "./routing/authRouter.js";
 import { config } from "dotenv";
 
 config();
@@ -12,6 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static("styles"));
 app.use(express.urlencoded({ extended: false }));
 app.use(postsRouter);
+app.use(authRouter);
 
 const PORT = process.env.PORT || 3000;
 
